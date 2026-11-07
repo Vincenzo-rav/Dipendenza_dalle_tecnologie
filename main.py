@@ -17,6 +17,10 @@ def curiosità():
     fatto = random.choice(curiosità)
     return f"Un particolare curioso è : {fatto}"
 
-app.run(debug=True)
+@app.route("/secret")
+def risultato():
+    risultato = ["Testa", "Croce"]
+    caso = random.choice(risultato)
+    return f"Il risultato è: {caso}"
 
-#https://docs.google.com/spreadsheets/d/1QoySRw2Si2Z7hW6mhju0519nGZoAvrpNZBDMpWRvwB4/edit?gid=0#gid=0
+app.run(debug=True)
